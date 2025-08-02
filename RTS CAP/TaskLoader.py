@@ -1,12 +1,15 @@
 import pandas as pd
 
+# REQUIRED_COLUMNS specifies the expected columns in the Excel file.
+# 'Period' and 'Execution Time' are in milliseconds.
+# 'Deadline' is based on Rate Monotonic Scheduling (RMS).
+# 'Resource Requirements' is currently not used in the system.
 REQUIRED_COLUMNS = [
     'Task ID', 
     'Priority', 
     'Period', 
     'Execution Time', 
-    'Deadline', 
-    'Resource Requirements'
+    'Deadline',
 ]
 
 def load_tasks_from_excel(file_path):
